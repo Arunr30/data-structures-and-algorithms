@@ -13,7 +13,7 @@ public class LL {
 
   public void insertLast(int val) {
         if(tail == null) {
-            insertNode(val);
+            insertFirst(val);
             return;
         }
         Node node = new Node(val);
@@ -23,10 +23,9 @@ public class LL {
   }
 
 // insert in index
-
     public void insert(int val, int index) {
         if(head == null) {
-            insertNode(val);
+            insertFirst(val);
             return;
         }
         if(index == size) {
@@ -42,12 +41,8 @@ public class LL {
         size++;
     }
 
-
-
-
 // inserting the node in the first
-
-    public void insertNode(int val) {
+    public void insertFirst(int val) {
         Node node = new Node(val);
         node.next = head;
         head = node;
@@ -56,8 +51,62 @@ public class LL {
         }
         size++;
     }
-// displaying the node
 
+    // delete the first node
+    public int deleteFirst() {
+        int val = head.value;
+        head = head.next;
+        if(head == null) {
+            tail = null;
+        }
+        size --;
+        return val;
+    }
+
+    // delete last node
+    public int secondLast() {
+        Node secondNode = get(size - 2);
+        int val = tail.value;
+        tail = secondNode;
+        tail.next = null;
+        return val;
+    }
+
+    // deleting via index;
+    public int delete(int index) {
+        if(index == 0) {
+            return deleteFirst();
+        }
+        if(index == size - 1) {
+            return secondLast();
+        }
+        Node prev = get(index - 1);
+        int val = prev.next.value;
+        prev.next = prev.next.next;
+        return val;
+    }
+
+    // finding
+    public Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if(node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+    public Node get(int index) {
+        Node node = head;
+        for(int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
+    // displaying the node
     public void display(){
         Node temp = head;
         while(temp != null) {
