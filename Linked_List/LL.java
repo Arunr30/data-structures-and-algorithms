@@ -10,7 +10,6 @@ public class LL {
         this.size = 0;
     }
   // insert the node in Last;
-
   public void insertLast(int val) {
         if(tail == null) {
             insertFirst(val);
