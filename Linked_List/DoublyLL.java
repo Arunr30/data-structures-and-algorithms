@@ -33,7 +33,7 @@ public class DoublyLL {
         System.out.println(" NULL");
     }
 
-    // inserting node in first;
+    // inserting node in Last;
 
     public void insertLastNode(int val) {
         Node node = new Node(val);

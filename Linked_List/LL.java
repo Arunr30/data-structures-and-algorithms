@@ -20,7 +20,6 @@ public class LL {
         tail = node;
         size++;
   }
-
 // insert in index
     public void insert(int val, int index) {
         if(head == null) {
@@ -36,7 +35,7 @@ public class LL {
             temp = temp.next;
         }
         Node node = new Node(val, temp.next);
-        temp.next = node;
+
         size++;
     }
 
@@ -85,6 +84,13 @@ public class LL {
         return val;
     }
 
+    public Node get(int index) {
+        Node node = head;
+        for(int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
     // finding
     public Node find(int value) {
         Node node = head;
@@ -97,13 +103,7 @@ public class LL {
         return null;
     }
 
-    public Node get(int index) {
-        Node node = head;
-        for(int i = 0; i < index; i++) {
-            node = node.next;
-        }
-        return node;
-    }
+
 
     // displaying the node
     public void display(){
