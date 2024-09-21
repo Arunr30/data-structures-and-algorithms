@@ -37,7 +37,16 @@ public class Main {
 //        list.insertLast(0);
 //        list.display();
 
-
+//       LL list = new LL();
+//       list.insertFirst(1);
+//       list.insertFirst(2);
+//       list.display();
+        PracticeLL l = new PracticeLL();
+        l.insertFirst(2);
+        l.insertFirst(1);
+        l.insertLast(3);
+        l.insert(8,1);
+        l.display();
 
 
 

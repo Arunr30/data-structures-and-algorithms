@@ -10,34 +10,34 @@ public class LL {
         this.size = 0;
     }
   // insert the node in Last;
-  public void insertLast(int val) {
-        if(tail == null) {
-            insertFirst(val);
-            return;
-        }
-        Node node = new Node(val);
-        tail.next = node;
-        tail = node;
-        size++;
-  }
-// insert in index
-    public void insert(int val, int index) {
-        if(head == null) {
-            insertFirst(val);
-            return;
-        }
-        if(index == size) {
-            insertLast(val);
-            return;
-        }
-        Node temp = head;
-        for(int i = 1; i < index; i++) {
-            temp = temp.next;
-        }
-        Node node = new Node(val, temp.next);
-
-        size++;
-    }
+//  public void insertLast(int val) {
+//        if(tail == null) {
+//            insertFirst(val);
+//            return;
+//        }
+//        Node node = new Node(val);
+//        tail.next = node;
+//        tail = node;
+//        size++;
+//  }
+//// insert in index
+//    public void insert(int val, int index) {
+//        if(head == null) {
+//            insertFirst(val);
+//            return;
+//        }
+//        if(index == size) {
+//            insertLast(val);
+//            return;
+//        }
+//        Node temp = head;
+//        for(int i = 1; i < index; i++) {
+//            temp = temp.next;
+//        }
+//        Node node = new Node(val, temp.next);
+//
+//        size++;
+//    }
 
 // inserting the node in the first
     public void insertFirst(int val) {
@@ -49,59 +49,59 @@ public class LL {
         }
         size++;
     }
-
-    // delete the first node
-    public int deleteFirst() {
-        int val = head.value;
-        head = head.next;
-        if(head == null) {
-            tail = null;
-        }
-        size --;
-        return val;
-    }
-
-    // delete last node
-    public int secondLast() {
-        Node secondNode = get(size - 2);
-        int val = tail.value;
-        tail = secondNode;
-        tail.next = null;
-        return val;
-    }
-
-    // deleting via index;
-    public int delete(int index) {
-        if(index == 0) {
-            return deleteFirst();
-        }
-        if(index == size - 1) {
-            return secondLast();
-        }
-        Node prev = get(index - 1);
-        int val = prev.next.value;
-        prev.next = prev.next.next;
-        return val;
-    }
-
-    public Node get(int index) {
-        Node node = head;
-        for(int i = 0; i < index; i++) {
-            node = node.next;
-        }
-        return node;
-    }
-    // finding
-    public Node find(int value) {
-        Node node = head;
-        while (node != null) {
-            if(node.value == value) {
-                return node;
-            }
-            node = node.next;
-        }
-        return null;
-    }
+//
+//    // delete the first node
+//    public int deleteFirst() {
+//        int val = head.value;
+//        head = head.next;
+//        if(head == null) {
+//            tail = null;
+//        }
+//        size --;
+//        return val;
+//    }
+//
+//    // delete last node
+//    public int secondLast() {
+//        Node secondNode = get(size - 2);
+//        int val = tail.value;
+//        tail = secondNode;
+//        tail.next = null;
+//        return val;
+//    }
+//
+//    // deleting via index;
+//    public int delete(int index) {
+//        if(index == 0) {
+//            return deleteFirst();
+//        }
+//        if(index == size - 1) {
+//            return secondLast();
+//        }
+//        Node prev = get(index - 1);
+//        int val = prev.next.value;
+//        prev.next = prev.next.next;
+//        return val;
+//    }
+//
+//    public Node get(int index) {
+//        Node node = head;
+//        for(int i = 0; i < index; i++) {
+//            node = node.next;
+//        }
+//        return node;
+//    }
+//    // finding
+//    public Node find(int value) {
+//        Node node = head;
+//        while (node != null) {
+//            if(node.value == value) {
+//                return node;
+//            }
+//            node = node.next;
+//        }
+//        return null;
+//    }
 
 
 
