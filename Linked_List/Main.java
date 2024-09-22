@@ -41,15 +41,29 @@ public class Main {
 //       list.insertFirst(1);
 //       list.insertFirst(2);
 //       list.display();
-        PracticeLL l = new PracticeLL();
-        l.insertFirst(2);
-        l.insertFirst(1);
-        l.insertLast(3);
-        l.insert(8,1);
+//        PracticeLL l = new PracticeLL();
+//        l.insertFirst(1);
+//        l.insertFirst(10);
+//        l.insertFirst(12);
+//        l.insertFirst(15);
+//        l.display();
+//        l.deleteLast();
+//        l.display();
+
+
+//        PracticeDll l = new PracticeDll();
+//        l.insertFirst(1);
+//        l.insertFirst(3);
+//        l.insertFirst(5);
+//        l.insertLast(0);
+//        l.insert(1,9);
+//        l.display();
+
+        PCll l = new PCll();
+        l.insert(1);
+        l.insert(2);
+        l.insert(3);
+        l.delete(3);
         l.display();
-
-
-
-
     }
 }
