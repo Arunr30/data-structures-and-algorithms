@@ -17,6 +17,5 @@ public class stop_user {
         } while(x > 0);
         System.out.println("No data was entered");
 
-
     }
 }
